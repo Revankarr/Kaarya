@@ -1,0 +1,143 @@
+1. Booking Policy
+Eligibility: Only registered members or authorized guests may book and use the coworking space.
+
+Advance Booking: Bookings must be made at least 24 hours in advance through the official website, app, or reception desk.
+
+Cancellation: Users may cancel a booking up to 12 hours before the scheduled time with no penalty. Later cancellations may incur a fee equivalent to one hour’s usage.
+
+No-Show Policy: Three consecutive no-shows may result in temporary suspension of booking privileges.
+
+Duration Limits: Desk and conference room bookings are limited to 8 hours per day per user.
+
+Group Bookings: For groups larger than 6 people, advance notice of 48 hours is required, subject to space availability.
+
+2. Usage Policy
+Check-In/Out: Members must check-in at reception or via the app upon arrival and check-out when leaving.
+
+Operating Hours: The coworking space is open Monday to Saturday from 8:00AM to 8:00PM. Special arrangements for after-hours access must be requested and approved in advance.
+
+Workspace Etiquette:
+
+Maintain a quiet environment; use headphones for calls and video meetings.
+
+Clean workspace after use and dispose of waste in designated bins.
+
+Shared resources (printers, kitchen, conference rooms) should be used considerately and left clean for the next user.
+
+Guest Policy: Members are allowed to bring one guest. Additional guests must be registered in advance and may be subject to a fee.
+
+Food & Beverages: Light snacks and beverages are permitted. Meals should be consumed only in designated dining areas.
+
+Prohibited Activities: Smoking, alcohol, illegal substances, and disruptive behavior are strictly prohibited.
+
+Personal Belongings: The coworking space is not responsible for lost or stolen items; members are advised to keep valuables secure.
+
+Internet Usage: High-speed WiFi is available, but downloading pirated or illegal content is strictly prohibited.
+
+Facilities Care: Report any damages to staff immediately. Users may be held accountable for damages caused during their occupancy.
+
+3. Health & Safety
+Emergency Procedures: Familiarize yourself with fire exits and emergency protocols displayed at the venue.
+
+Hygiene: Sanitizers are provided throughout the facility. Please maintain personal hygiene and avoid using the facility if unwell.
+
+4. Payment & Fees
+Payment: Fees for space usage, printing, and other services must be settled monthly or as per package terms.
+
+Late Payment: Overdue balances beyond 7 days may result in suspension of access.
+
+5. Amendments
+Policy Changes: The management reserves the right to amend these policies at any time; members will be notified of significant changes.
+
+These policies can be tailored further based on your specific space, clientele, or operational requirements.
+
+Payment Policies
+Payment Methods: Members can pay using UPI, credit/debit cards, net banking, or through in-app payments. Cash payments are accepted at selected locations only.
+
+Flexible Plans: Payment frequency options include monthly, quarterly, and annual plans, allowing members to choose what best fits their requirements.
+
+Comprehensive Billing: Fees include workspace rental and basic amenities (WiFi, utilities, tea/coffee). Customizations or extra services (locker rentals, parking, extended meeting room usage) are charged separately.
+
+Invoicing: Invoices are generated after every successful payment and are emailed to the registered member.
+
+Due Dates: Payments for ongoing memberships are due by the 5th of each month. Late payments may result in a late fee and/or suspension of access.
+
+Security Deposit: For long-term or private space bookings, a refundable security deposit equivalent to one month’s rent may be required.
+
+Refund Policies
+Day Passes/Short-Term Bookings: Cancellations made at least 12 hours prior to the booking time are eligible for a full refund. Cancellations after this period are not refunded.
+
+Memberships: Monthly memberships are non-refundable once the billing cycle has started.
+
+Long-Term Plans: For quarterly or annual plans, members who cancel their plans with more than 30 days’ notice may receive a partial pro-rata refund (minus any applicable discounts or promotional offers availed).
+
+Security Deposits: Refunded within 15 business days after membership termination, provided no outstanding dues or damages.
+
+Refund Process: Refunds are processed using the original payment method within 5–15 working days, depending on the bank or payment gateway.
+
+Non-Refundable Fees: Registration/setup charges, penalties for no-shows/late cancellations, and charges for customizations are non-refundable.
+
+These policies help set clear expectations for members and ensure smoother financial operations for the coworking space.
+
+1. Design & Aesthetics Pointers
+
+Brand Consistency
+	•	Logo Treatment: The logo in the header and footer feels a bit dated with its bevel/emboss effect. Consider a flat, minimal look in line with modern coworking branding.
+	•	Color Palette:
+	•	Current brown + beige is earthy, but the tones look dull on mobile.
+	•	Use a richer, warmer brown with contrast accents (maybe muted gold or terracotta) to complement the indigenous feel.
+	•	Typography Integration:
+	•	Headings → Use Soul Signature for H1/H2 only (hero section titles, section headers like “Facilities”). This gives an artisanal, creative touch.
+	•	Body Copy → Use Eina 01 for paragraphs, buttons, and small headings for better readability.
+	•	Maintain consistent font sizes and spacing for hierarchy.
+
+Hero Section
+	•	The background video is nice, but text contrast is low — white on bright spots makes it hard to read. Add a semi-transparent overlay (dark with ~40% opacity).
+	•	The “Explore Our Spaces” CTA should be bigger, with a button style (solid color, rounded corners, or outlined with hover animation).
+
+Imagery & Media
+	•	Avoid stretched images in carousels — maintain aspect ratios.
+Spacing & Layout
+	•	The sections feel tight and cramped; increase padding/margins to let each block breathe.
+	•	Replace decorative swirls with minimal dividers or clean lines — the ornate ones feel inconsistent with the modern coworking tone.
+Icons
+	•	Current icons are thin-line and generic; switch to a custom or more geometric icon set that matches the branding style.
+	•	Maintain equal sizing and alignment of icons and text.
+Footer
+	•	The footer typography is small and cramped; use Eina 01 with increased line-height.
+	•	Align contact details and social media links neatly — right now they look scattered.
+
+2. UI/UX Pointers
+	•	Navigation:
+	•	The site could benefit from a sticky top navigation bar for quicker access.
+	•	Add clear CTAs like “Book a Tour” or “View Plans” to the header.
+	•	Mobile Optimization:
+	•	Text wraps awkwardly in some places.
+	•	Buttons and clickable areas should have more padding for thumb-friendly tapping.
+	•	Scroll Flow:
+	•	Group facilities into a single clean grid rather than repeating similar icon + text blocks multiple times.
+	•	Reduce redundancy (“Office Facilities” repeats twice).
+	•	CTA Placement: Every major section should end with a clear action step.
+
+>>>>>>>
+3. Technical & SEO Pointers
+	•	Font Integration:
+	•	Host Soul Signature and Eina 01 via webfont (Google Fonts for Eina-like or custom font-face for both).
+	•	Ensure fallback fonts for performance.
+	•	Performance Optimization:
+	•	Compress background videos and images for faster loading.
+	•	Minify HTML/CSS/JS.
+	•	SEO Essentials:
+	•	Add descriptive <title> and <meta description> for each page.
+	•	Ensure <h1> is unique and keyword-rich (e.g., “Kaarya Coworking Space – JP Nagar, Bangalore”).
+	•	Use ALT tags for all images.
+	•	Create an XML sitemap and robots.txt.
+	•	Google My Business (has beeen listed - needs to be linked)
+Integration:
+	•	Add Google Maps embed in Contact section.
+4. Suggested Soul Signature + Eina 01 Usage
+	•	Soul Signature → Section titles, hero headings, “Kaarya” brand name on the site, and pull quotes.
+	•	Eina 01 → All body text, navigation menu, CTA buttons, and descriptions
+
+
+font - Eina01-SemiBold 
