@@ -24,7 +24,7 @@ export const site = {
   },
   // Google Apps Script web app URL (see apps-script/README.md). Bookings go to the Google Sheet
   // and are emailed to the team. Left empty, the form opens a pre-filled email instead.
-  bookingEndpoint: '',
+  bookingEndpoint: 'https://script.google.com/macros/s/AKfycbwRsb2b4SrOTufFI_s15mp8YhbyaQSIdoxbirfpeYIECZaZrFtVdONSDwLOnGEVot07og/exec',
 };
 
 export const nav = [
