@@ -28,7 +28,7 @@ export default function Footer() {
           <div>
             <h3>Hours</h3>
             <p>Monday – Saturday</p>
-            <p>8:00 AM – 8:00 PM</p>
+            <p>9:00 AM – 9:00 PM</p>
             <p className="muted">After-hours access on request</p>
           </div>
           <div>

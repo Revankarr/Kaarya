@@ -32,7 +32,7 @@ function Hero() {
       </div>
       <dl className="hero__facts container">
         <div><dt>10,000</dt><dd>sq. ft. workspace</dd></div>
-        <div><dt>8 – 8</dt><dd>Monday to Saturday</dd></div>
+        <div><dt>9 – 9</dt><dd>Monday to Saturday</dd></div>
         <div><dt>JP Nagar</dt><dd>Bangalore</dd></div>
       </dl>
     </section>
@@ -89,7 +89,7 @@ function WhoWeAre() {
           <SectionHead eyebrow={w.eyebrow} title={w.title} />
           {w.body.map((p) => <p key={p} className="body-lg">{p}</p>)}
           <ul className="chips">
-            {['High-speed Wi-Fi', 'Equipped offices', 'Parking', 'Meeting rooms', 'Chai & coffee kitchen'].map((c) => (
+            {['High-speed Wi-Fi', 'Equipped offices', 'Parking', 'Meeting rooms', 'Coffee & chai café'].map((c) => (
               <li key={c}>{c}</li>
             ))}
           </ul>

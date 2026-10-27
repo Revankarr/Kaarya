@@ -14,7 +14,7 @@ export const site = {
     'Nagarjun Enclave, 1st Phase, J.\u00a0P.\u00a0Nagar',
     'Bengaluru, Karnataka 560078',
   ],
-  hours: 'Mon – Sat · 8:00 AM – 8:00 PM',
+  hours: 'Mon – Sat · 9:00 AM – 9:00 PM',
   // Google Business Profile listing "Kaarya Shared Workspaces".
   googleBusiness: 'https://share.google/sNoNhbz4NyQ3MdNZB',
   mapEmbed: 'https://www.google.com/maps?q=Kaarya+Shared+Workspaces,+Eterna,+788,+15th+Cross+Rd,+J.+P.+Nagar+1st+Phase,+Bengaluru+560078&output=embed',
@@ -49,7 +49,7 @@ export const meta = {
   '/spaces': {
     title: 'Coworking Spaces & Meeting Rooms in JP Nagar, Bangalore | Kaarya',
     description:
-      'Explore Kaarya’s 10,000 sq. ft. coworking space in JP Nagar, Bangalore: flexible desks, private cabins, a fully-equipped kitchen, parking and meeting rooms bookable by the hour.',
+      'Explore Kaarya’s 10,000 sq. ft. coworking space in JP Nagar, Bangalore: flexible desks, private cabins, a coffee & chai café, parking and meeting rooms bookable by the hour.',
   },
   '/events': {
     title: 'Events, Workshops & Meetups in Bangalore | Kaarya Coworking',
@@ -93,7 +93,7 @@ export const home = {
     eyebrow: 'Who We Are',
     title: 'Perfect blend of modern and traditional',
     body: [
-      'We have all the essentials you would want in your co-working space, from high-speed Wi-Fi, comprehensively equipped offices, parking, and meeting rooms, to a completely functional kitchen where you can make your favourite chai or coffee!',
+      'We have all the essentials you would want in your co-working space, from high-speed Wi-Fi, comprehensively equipped offices, parking, and meeting rooms, to a café corner serving freshly brewed chai and coffee all day!',
       'Escape the ordinary cubicle and step into a coworking space where tradition meets innovation. Breathe in the calming melodies, surrounded by beautiful Indian design elements and a sense of community that will make working truly enjoyable.',
     ],
   },
@@ -171,16 +171,16 @@ export const spaces = {
   hero: {
     eyebrow: 'The Kaarya Concept',
     title: 'A space designed just for you',
-    body: 'Our 10,000 sq. ft. coworking space in Bangalore is carefully planned for your productivity and comfort. We have flexible workspaces, meeting rooms, a fully-equipped kitchen, blazing-fast Wi-Fi, and even parking spaces!',
+    body: 'Our 10,000 sq. ft. coworking space in Bangalore is carefully planned for your productivity and comfort. We have flexible workspaces, meeting rooms, a coffee & chai café, blazing-fast Wi-Fi, and even parking spaces!',
   },
   stats: [
     { value: '10,000', unit: 'sq. ft.', label: 'of thoughtfully planned space' },
-    { value: '6', unit: 'days', label: 'a week, 8 AM to 8 PM' },
-    { value: '1', unit: 'kitchen', label: 'for your chai, coffee & more' },
+    { value: '6', unit: 'days', label: 'a week, 9 AM to 9 PM' },
+    { value: '1', unit: 'café', label: 'for your chai, coffee & more' },
   ],
   features: [
     { icon: 'pin', image: 'reception', title: 'Prime Location', body: 'Nestled in the heart of JP Nagar, Bangalore, our co-working space offers easy access and excellent connectivity, ensuring you are never far from the essentials. It’s the perfect spot to hustle, collaborate, and make things happen.' },
-    { icon: 'cup', image: 'cafeteria', title: 'Fully-Equipped Kitchen', body: 'Treat yourself to freshly brewed coffee or tea anytime you need a pick-me-up and easy access to all the basic appliances you need to whip up something delicious whenever hunger strikes.' },
+    { icon: 'cup', image: 'cafeteria', title: 'Coffee & Chai Café', body: 'Treat yourself to freshly brewed coffee or tea anytime you need a pick-me-up. Our café corner is the perfect spot to recharge, catch up with fellow members, or take a well-earned break between tasks.' },
     { icon: 'desk', image: 'open-seating', title: 'Professional Office Facilities', body: 'Whether you need a dedicated desk, hot desk, or private office, we have a coworking space to suit your work needs. Our ergonomic furniture and organised workstations guarantee a comfortable and productive environment.' },
     { icon: 'community', image: 'open-seating-2', title: 'Community & Events', body: 'Forget isolated cubicles! We help you get together with like-minded individuals through our cultural events, workshops, networking opportunities, and more to build your network and spark new collaborations.' },
     { icon: 'flex', image: 'open-seating-3', title: 'Budget-Friendly & Flexible', body: 'Whether you are a freelancer, startup, or seasoned professional, we have affordable monthly packages as well as day passes to suit your needs. Every journey is different, and we are here to make sure you truly enjoy your work.' },
@@ -329,8 +329,8 @@ export const policies = [
     title: 'Usage Policy',
     items: [
       ['Check-In/Out', 'Members must check-in at reception or via the app upon arrival and check-out when leaving.'],
-      ['Operating Hours', 'The coworking space is open Monday to Saturday from 8:00 AM to 8:00 PM. Special arrangements for after-hours access must be requested and approved in advance.'],
-      ['Workspace Etiquette', 'Maintain a quiet environment; use headphones for calls and video meetings. Clean your workspace after use and dispose of waste in designated bins. Shared resources (printers, kitchen, conference rooms) should be used considerately and left clean for the next user.'],
+      ['Operating Hours', 'The coworking space is open Monday to Saturday from 9:00 AM to 9:00 PM. Special arrangements for after-hours access must be requested and approved in advance.'],
+      ['Workspace Etiquette', 'Maintain a quiet environment; use headphones for calls and video meetings. Clean your workspace after use and dispose of waste in designated bins. Shared resources (printers, café, conference rooms) should be used considerately and left clean for the next user.'],
       ['Guest Policy', 'Members are allowed to bring one guest. Additional guests must be registered in advance and may be subject to a fee.'],
       ['Food & Beverages', 'Light snacks and beverages are permitted. Meals should be consumed only in designated dining areas.'],
       ['Prohibited Activities', 'Smoking, alcohol, illegal substances, and disruptive behavior are strictly prohibited.'],

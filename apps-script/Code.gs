@@ -128,7 +128,7 @@ function sendConfirmation_(d) {
       Our team will confirm within a working day.</p>
       <p>Bookings are made at least 24 hours in advance, and you can cancel up to 12 hours before at no charge.</p>
       <p>Questions? Reply to this email or call us at ${esc_(CONFIG.PHONE)}.</p>
-      <p>Warmly,<br>Team Kaarya<br><span style="color:#7d6754">JP Nagar, Bangalore · Mon – Sat, 8 AM – 8 PM</span></p>
+      <p>Warmly,<br>Team Kaarya<br><span style="color:#7d6754">JP Nagar, Bangalore · Mon – Sat, 9 AM – 9 PM</span></p>
     </div>`,
   });
 }
