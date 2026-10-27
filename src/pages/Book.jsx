@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import DatePicker, { fromISODate, isWeekend } from '../components/DatePicker.jsx';
 import Icon from '../components/Icon.jsx';
 import { Eyebrow, PageHero, Reveal } from '../components/ui.jsx';
 import { book, site } from '../content.js';
 
 function BookingForm() {
   const [status, setStatus] = useState('idle');
-  const [minDate, setMinDate] = useState('');
+  const [minDate, setMinDate] = useState(null);
+  const [date, setDate] = useState('');
   const [error, setError] = useState('');
   const [searchParams] = useSearchParams();
   const [plan, setPlan] = useState(book.plans[0]);
@@ -17,8 +19,19 @@ function BookingForm() {
     if (book.plans.includes(requested)) setPlan(requested);
   }, [searchParams]);
 
-  // Computed on the client so the prerendered HTML never carries a stale date.
-  useEffect(() => setMinDate(new Date(Date.now() + 864e5).toISOString().slice(0, 10)), []);
+  // Bookings need 24 hours' notice, so the earliest date is tomorrow. Computed on the client
+  // so the prerendered HTML never carries a stale date.
+  useEffect(() => {
+    const now = new Date();
+    setMinDate(new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1));
+  }, []);
+
+  const allowWeekends = book.weekendPlans.includes(plan);
+
+  // Switching from Event Space to another plan drops a weekend date that's no longer allowed.
+  useEffect(() => {
+    if (date && !allowWeekends && isWeekend(fromISODate(date))) setDate('');
+  }, [allowWeekends, date]);
 
   async function onSubmit(e) {
     e.preventDefault();
@@ -59,7 +72,7 @@ function BookingForm() {
         <span className="feature__icon"><Icon name="check" /></span>
         <h3 className="display">Thank you!</h3>
         <p>We’ve got your request and will confirm your booking within a working day.</p>
-        <button className="btn btn--outline" onClick={() => setStatus('idle')}><span>Make another booking</span></button>
+        <button className="btn btn--outline" onClick={() => { setDate(''); setStatus('idle'); }}><span>Make another booking</span></button>
       </div>
     );
   }
@@ -90,10 +103,15 @@ function BookingForm() {
         <input name="email" type="email" required autoComplete="email" />
       </label>
       <div className="form__row">
-        <label className="field">
-          <span>Preferred date</span>
-          <input name="date" type="date" min={minDate || undefined} />
-        </label>
+        <DatePicker
+          name="date"
+          label="Preferred date"
+          value={date}
+          onChange={setDate}
+          minDate={minDate}
+          allowWeekends={allowWeekends}
+          note={allowWeekends ? 'Event Space can be booked on weekends too.' : 'Weekends are available for Event Space bookings only.'}
+        />
         <label className="field">
           <span>Team size</span>
           <select name="team" defaultValue="Just me">

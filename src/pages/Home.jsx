@@ -32,7 +32,7 @@ function Hero() {
       </div>
       <dl className="hero__facts container">
         <div><dt>10,000</dt><dd>sq. ft. workspace</dd></div>
-        <div><dt>9 – 9</dt><dd>Monday to Saturday</dd></div>
+        <div><dt>9 – 9</dt><dd>Monday to Friday</dd></div>
         <div><dt>JP Nagar</dt><dd>Bangalore</dd></div>
       </dl>
     </section>

@@ -20,6 +20,8 @@ const CONFIG = {
 
 const PLANS = ['Book a Tour', 'Day Pass', 'Monthly Membership', 'Meeting Room', 'Private Cabin', 'Event Space', 'Podcast Space'];
 const TEAM_SIZES = ['Just me', '2 – 5', '6 – 10', '10+'];
+// Only these can be booked on Saturdays and Sundays (matches book.weekendPlans in src/content.js).
+const WEEKEND_PLANS = ['Event Space'];
 const STATUSES = ['New', 'Contacted', 'Confirmed', 'Cancelled'];
 const HEADERS = ['Received', 'Status', 'Plan', 'Name', 'Phone', 'Email', 'Preferred date', 'Team size', 'Message', 'Page'];
 
@@ -89,7 +91,20 @@ function validate_(d) {
   if (!d.name) errors.push('Please enter your name.');
   if (!/^[+\d][\d\s-]{6,}$/.test(d.phone)) errors.push('Please enter a valid phone number.');
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) errors.push('Please enter a valid email address.');
-  if (d.date && !/^\d{4}-\d{2}-\d{2}$/.test(d.date)) errors.push('Please choose a valid date.');
+  if (d.date) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(d.date)) {
+      errors.push('Please choose a valid date.');
+    } else {
+      const [y, m, day] = d.date.split('-').map(Number);
+      const when = new Date(y, m - 1, day);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      if (when <= today) errors.push('Bookings need 24 hours’ notice. Please choose a later date.');
+      else if ((when.getDay() === 0 || when.getDay() === 6) && !WEEKEND_PLANS.includes(d.plan)) {
+        errors.push('Weekends are available for Event Space bookings only. Please choose a weekday.');
+      }
+    }
+  }
   if (d.team && !TEAM_SIZES.includes(d.team)) errors.push('Please choose a team size.');
   return errors;
 }
@@ -128,7 +143,7 @@ function sendConfirmation_(d) {
       Our team will confirm within a working day.</p>
       <p>Bookings are made at least 24 hours in advance, and you can cancel up to 12 hours before at no charge.</p>
       <p>Questions? Reply to this email or call us at ${esc_(CONFIG.PHONE)}.</p>
-      <p>Warmly,<br>Team Kaarya<br><span style="color:#7d6754">JP Nagar, Bangalore · Mon – Sat, 9 AM – 9 PM</span></p>
+      <p>Warmly,<br>Team Kaarya<br><span style="color:#7d6754">JP Nagar, Bangalore · Mon – Fri, 9 AM – 9 PM</span></p>
     </div>`,
   });
 }

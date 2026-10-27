@@ -14,7 +14,7 @@ export const site = {
     'Nagarjun Enclave, 1st Phase, J.\u00a0P.\u00a0Nagar',
     'Bengaluru, Karnataka 560078',
   ],
-  hours: 'Mon – Sat · 9:00 AM – 9:00 PM',
+  hours: 'Mon – Fri · 9:00 AM – 9:00 PM',
   // Google Business Profile listing "Kaarya Shared Workspaces".
   googleBusiness: 'https://share.google/sNoNhbz4NyQ3MdNZB',
   mapEmbed: 'https://www.google.com/maps?q=Kaarya+Shared+Workspaces,+Eterna,+788,+15th+Cross+Rd,+J.+P.+Nagar+1st+Phase,+Bengaluru+560078&output=embed',
@@ -175,7 +175,7 @@ export const spaces = {
   },
   stats: [
     { value: '10,000', unit: 'sq. ft.', label: 'of thoughtfully planned space' },
-    { value: '6', unit: 'days', label: 'a week, 9 AM to 9 PM' },
+    { value: '5', unit: 'days', label: 'a week, 9 AM to 9 PM' },
     { value: '1', unit: 'café', label: 'for your chai, coffee & more' },
   ],
   features: [
@@ -303,6 +303,8 @@ export const book = {
     body: 'Experience a vibrant community, modern amenities, and a unique blend of Indian heritage and innovation. Choose your plan, book online, and start working in your new haven.',
   },
   plans: ['Book a Tour', 'Day Pass', 'Monthly Membership', 'Meeting Room', 'Private Cabin', 'Event Space', 'Podcast Space'],
+  // Only these can be booked on Saturdays and Sundays; the calendar blocks weekends for everything else.
+  weekendPlans: ['Event Space'],
   notes: [
     'Bookings are made at least 24 hours in advance.',
     'Cancel up to 12 hours before at no charge.',
@@ -329,7 +331,7 @@ export const policies = [
     title: 'Usage Policy',
     items: [
       ['Check-In/Out', 'Members must check-in at reception or via the app upon arrival and check-out when leaving.'],
-      ['Operating Hours', 'The coworking space is open Monday to Saturday from 9:00 AM to 9:00 PM. Special arrangements for after-hours access must be requested and approved in advance.'],
+      ['Operating Hours', 'The coworking space is open Monday to Friday from 9:00 AM to 9:00 PM. Weekends are reserved for Event Space bookings. Special arrangements for after-hours access must be requested and approved in advance.'],
       ['Workspace Etiquette', 'Maintain a quiet environment; use headphones for calls and video meetings. Clean your workspace after use and dispose of waste in designated bins. Shared resources (printers, café, conference rooms) should be used considerately and left clean for the next user.'],
       ['Guest Policy', 'Members are allowed to bring one guest. Additional guests must be registered in advance and may be subject to a fee.'],
       ['Food & Beverages', 'Light snacks and beverages are permitted. Meals should be consumed only in designated dining areas.'],
