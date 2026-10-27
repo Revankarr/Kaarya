@@ -4,23 +4,27 @@ export const site = {
   name: 'Kaarya',
   url: 'https://www.kaarya.co',
   tagline: 'Coworking Space – JP Nagar, Bangalore',
-  // TODO: replace with the real phone number, email and street address before launch.
-  phone: '+91 00000 00000',
-  phoneHref: 'tel:+910000000000',
-  whatsappHref: 'https://wa.me/910000000000',
-  email: 'hello@kaarya.co',
-  address: ['Kaarya Coworking Space', 'JP Nagar', 'Bengaluru, Karnataka'],
+  phone: '+91 99016 41122',
+  phoneHref: 'tel:+919901641122',
+  whatsappHref: 'https://wa.me/919901641122',
+  email: 'info@kaarya.co',
+  address: [
+    'Kaarya Shared Workspaces',
+    '2nd Floor, Eterna, 788, 15th Cross Rd',
+    'Nagarjun Enclave, 1st Phase, J.\u00a0P.\u00a0Nagar',
+    'Bengaluru, Karnataka 560078',
+  ],
   hours: 'Mon – Sat · 8:00 AM – 8:00 PM',
-  // TODO: paste the Google Business Profile link once it is connected.
-  googleBusiness: 'https://www.google.com/maps/search/?api=1&query=Kaarya+Coworking+Space+JP+Nagar+Bangalore',
-  mapEmbed: 'https://www.google.com/maps?q=Kaarya+Coworking+Space+JP+Nagar+Bangalore&output=embed',
+  // Google Business Profile listing "Kaarya Shared Workspaces".
+  googleBusiness: 'https://share.google/sNoNhbz4NyQ3MdNZB',
+  mapEmbed: 'https://www.google.com/maps?q=Kaarya+Shared+Workspaces,+Eterna,+788,+15th+Cross+Rd,+J.+P.+Nagar+1st+Phase,+Bengaluru+560078&output=embed',
   social: {
-    instagram: 'https://www.instagram.com/',
-    linkedin: 'https://www.linkedin.com/',
+    instagram: 'https://www.instagram.com/kaarya.co/',
+    linkedin: 'https://www.linkedin.com/company/kaarya-shared-workspaces/',
   },
-  // Optional: set to a Formspree (or similar) endpoint to receive bookings directly.
-  // Left empty, the booking form opens a pre-filled email instead.
-  formEndpoint: '',
+  // Google Apps Script web app URL (see apps-script/README.md). Bookings go to the Google Sheet
+  // and are emailed to the team. Left empty, the form opens a pre-filled email instead.
+  bookingEndpoint: '',
 };
 
 export const nav = [
@@ -70,7 +74,6 @@ export const offeringsTicker = [
   'Café',
   'Managerial Cabins',
   'Board & Conference Rooms',
-  'Artisanal Coffee',
   'High-speed Internet',
   'Event Spaces',
 ];

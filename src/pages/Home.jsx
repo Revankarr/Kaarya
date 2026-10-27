@@ -65,7 +65,7 @@ function Rooted() {
           <Button to="/about" variant="link">Learn More</Button>
         </Reveal>
         <Reveal className="rooted__media" delay={120}>
-          <Photo name="signage" shape="arch" />
+          <Photo name="reception" shape="arch" />
           <span className="rooted__badge" aria-hidden="true">
             <span className="script">Kaarya</span>
             <span>Sanskrit for<br />action &amp; work</span>

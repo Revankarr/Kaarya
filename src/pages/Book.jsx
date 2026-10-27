@@ -7,6 +7,7 @@ import { book, site } from '../content.js';
 function BookingForm() {
   const [status, setStatus] = useState('idle');
   const [minDate, setMinDate] = useState('');
+  const [error, setError] = useState('');
   const [searchParams] = useSearchParams();
   const [plan, setPlan] = useState(book.plans[0]);
 
@@ -22,20 +23,28 @@ function BookingForm() {
   async function onSubmit(e) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget));
-    if (site.formEndpoint) {
+    if (site.bookingEndpoint) {
       setStatus('sending');
+      setError('');
       try {
-        const res = await fetch(site.formEndpoint, {
+        // Form-encoded (not JSON) so the browser sends a simple request: Apps Script can't answer CORS preflights.
+        const res = await fetch(site.bookingEndpoint, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(data),
+          body: new URLSearchParams({ ...data, page: window.location.href }),
         });
-        setStatus(res.ok ? 'sent' : 'error');
+        const result = await res.json();
+        if (result.ok) {
+          setStatus('sent');
+        } else {
+          setError(result.error || '');
+          setStatus('error');
+        }
       } catch {
         setStatus('error');
       }
       return;
     }
+    delete data.website;
     const body = Object.entries(data)
       .filter(([, v]) => v)
       .map(([k, v]) => `${k}: ${v}`)
@@ -99,11 +108,18 @@ function BookingForm() {
         <span>Anything we should know?</span>
         <textarea name="message" rows="4" />
       </label>
+      {/* Spam trap: hidden from people, filled in by bots, ignored by the server. */}
+      <label className="form__hp" aria-hidden="true">
+        Website
+        <input name="website" tabIndex={-1} autoComplete="off" />
+      </label>
       <button className="btn btn--solid btn--lg btn--block" type="submit" disabled={status === 'sending'}>
         <span>{status === 'sending' ? 'Sending…' : 'Request Booking'}</span>
         <Icon name="arrow" size={18} />
       </button>
-      {status === 'error' && <p className="form__error">Something went wrong. Please call us at {site.phone}.</p>}
+      {status === 'error' && (
+        <p className="form__error" role="alert">{error || `Something went wrong. Please call us at ${site.phone}.`}</p>
+      )}
       <p className="form__fine">By booking you agree to our <a href="/policies">booking &amp; refund policies</a>.</p>
     </form>
   );

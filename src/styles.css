@@ -1892,6 +1892,14 @@ address {
   border-color: var(--clay);
 }
 
+.form__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form__fine,
 .form__error {
   margin: 0;
@@ -2118,7 +2126,7 @@ address {
 
 .site-footer__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1.5fr 1fr 1fr 0.8fr;
   gap: 40px;
   padding-block: clamp(48px, 6vw, 72px);
 }

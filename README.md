@@ -26,8 +26,8 @@ Each route is written as `dist/<route>/index.html`, and `dist/404.html`, `sitema
 
 ## Before launch
 
-- [ ] Replace the placeholder phone, email and street address in `src/content.js` (`site`).
-- [ ] Paste the Google Business Profile link (`site.googleBusiness`) and Instagram/LinkedIn URLs.
-- [ ] Optional: set `site.formEndpoint` (e.g. Formspree) so bookings arrive directly. Without it the form opens a pre-filled email.
+- [ ] Check the map on `/book` pins the right place; if not, use Google Maps → Share → Embed a map and paste its `src` into `site.mapEmbed`.
+- [ ] Confirm the domain: the site, sitemap and Google listing assume `https://www.kaarya.co`.
+- [ ] Set up the booking backend (Google Sheet + Apps Script) following [apps-script/README.md](apps-script/README.md) and paste its URL into `site.bookingEndpoint`. Until then the form opens a pre-filled email.
 - [ ] Soul Signature (headings, `public/fonts/SoulSignature.ttf`) is © Fikryal.Co Studio. Confirm Kaarya holds a commercial licence before launch.
 - All other text uses Eina 01 SemiBold (`public/fonts/Eina01-SemiBold.ttf`).
