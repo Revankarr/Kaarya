@@ -2381,8 +2381,40 @@ address {
 }
 
 @media (max-width: 640px) {
+  /* Compact "Book a Day Pass" stays visible next to the menu button. */
+  .site-header__bar {
+    gap: 12px;
+  }
+
+  .site-header__actions {
+    gap: 10px;
+  }
+
   .site-header .btn--sm {
-    display: none;
+    min-height: 44px;
+    padding: 10px 16px;
+    font-size: 0.82rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  /* Soul Signature is narrow, so headings can run larger on phones. */
+  .display {
+    font-size: 3.9rem;
+    line-height: 1.02;
+  }
+
+  .display--xl {
+    font-size: 4.5rem;
+  }
+
+  .display--hero {
+    font-size: 5rem;
+    line-height: 0.95;
+  }
+
+  .pull-quote {
+    font-size: 3.2rem;
   }
 
   .hero__inner {
@@ -2466,6 +2498,28 @@ address {
   .plan-card .btn {
     flex: 1 1 100%;
     align-self: stretch;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header__logo .logo {
+    width: 104px;
+  }
+
+  .site-header .btn--sm {
+    padding-inline: 12px;
+  }
+
+  .display {
+    font-size: 3.5rem;
+  }
+
+  .display--xl {
+    font-size: 4rem;
+  }
+
+  .display--hero {
+    font-size: 4.4rem;
   }
 }
 
