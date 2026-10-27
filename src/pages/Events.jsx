@@ -5,7 +5,7 @@ import { events } from '../content.js';
 export default function Events() {
   return (
     <>
-      <PageHero {...events.hero} image="lounge" />
+      <PageHero {...events.hero} image="happening-event-2" />
 
       <section className="section">
         <div className="container">

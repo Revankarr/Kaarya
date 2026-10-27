@@ -5,7 +5,7 @@ import Icon from './Icon.jsx';
 import { nav, site } from '../content.js';
 
 // Routes that open on a dark photo/video hero, where the header starts transparent.
-const darkHeroRoutes = ['/', '/about', '/spaces', '/meeting-rooms', '/events', '/book'];
+const darkHeroRoutes = ['/', '/about', '/spaces', '/events', '/book'];
 
 export default function Header() {
   const { pathname } = useLocation();
@@ -47,8 +47,8 @@ export default function Header() {
 
         <div className="site-header__actions">
           <Link to="/#plans" className="site-header__plans">View Plans</Link>
-          <Link to="/book" className="btn btn--solid btn--sm">
-            <span>Book a Tour</span>
+          <Link to="/book?plan=Day%20Pass" className="btn btn--solid btn--sm">
+            <span>Book a Day Pass</span>
           </Link>
           <button
             className="menu-toggle"
@@ -78,7 +78,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="mobile-menu__foot">
-          <Link to="/book" className="btn btn--solid"><span>Book a Tour</span><Icon name="arrow" size={18} /></Link>
+          <Link to="/book?plan=Day%20Pass" className="btn btn--solid"><span>Book a Day Pass</span><Icon name="arrow" size={18} /></Link>
           <a href={site.phoneHref} className="btn btn--outline-light"><span>Call us</span><Icon name="phone" size={18} /></a>
           <p>{site.hours}</p>
         </div>

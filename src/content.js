@@ -26,7 +26,6 @@ export const site = {
 export const nav = [
   { to: '/about', label: 'About' },
   { to: '/spaces', label: 'Spaces' },
-  { to: '/meeting-rooms', label: 'Meeting Rooms' },
   { to: '/events', label: 'Events' },
   { to: '/policies', label: 'Policies' },
 ];
@@ -44,14 +43,9 @@ export const meta = {
       'Kaarya means action in Sanskrit. Meet the story and the architect, Ajay JS, behind Bangalore’s first culturally rooted coworking space.',
   },
   '/spaces': {
-    title: 'Our Spaces – Hot Desks, Private Offices & Kitchen | Kaarya JP Nagar',
+    title: 'Coworking Spaces & Meeting Rooms in JP Nagar, Bangalore | Kaarya',
     description:
-      'Explore Kaarya’s 10,000 sq. ft. coworking space in JP Nagar, Bangalore: flexible desks, private cabins, meeting rooms, a fully-equipped kitchen and parking.',
-  },
-  '/meeting-rooms': {
-    title: 'Meeting Rooms in Bangalore – Bookable by the Hour | Kaarya',
-    description:
-      'Book naturally lit, tech-enabled meeting rooms in JP Nagar, Bangalore. Huddle rooms to conference rooms, with Wi-Fi, projector and AV for video calls.',
+      'Explore Kaarya’s 10,000 sq. ft. coworking space in JP Nagar, Bangalore: flexible desks, private cabins, a fully-equipped kitchen, parking and meeting rooms bookable by the hour.',
   },
   '/events': {
     title: 'Events, Workshops & Meetups in Bangalore | Kaarya Coworking',
@@ -76,7 +70,6 @@ export const offeringsTicker = [
   'Café',
   'Managerial Cabins',
   'Board & Conference Rooms',
-  'Dedicated Calling Booths',
   'Artisanal Coffee',
   'High-speed Internet',
   'Event Spaces',
@@ -131,17 +124,6 @@ export const home = {
       { icon: 'spark', title: 'Events that Spark', body: 'We host workshops, talks, and meetups that feed your mind and fuel your hustle. Connect with inspiring individuals, learn new skills, and find your tribe.' },
     ],
   },
-  testimonials: {
-    eyebrow: 'Members',
-    title: 'Hear from our thriving community',
-    body: 'Wondering what it’s like to work at Kaarya? Dive into our members’ experiences and discover why Kaarya is more than just a co-working space in Bangalore.',
-    // PLACEHOLDER: replace with real member reviews (e.g. from Google Business) before launch.
-    items: [
-      { quote: 'The first coworking space that doesn’t feel like an office park. Chai on tap, music in the air, and I genuinely get more done here.', name: 'Member name', role: 'Independent designer' },
-      { quote: 'We moved our five-person team in for a month and stayed for a year. The meeting rooms are flooded with light and clients love the space.', name: 'Member name', role: 'Startup founder' },
-      { quote: 'Warm people, beautiful interiors and a community that actually shows up for each other’s events. It feels like home with better Wi-Fi.', name: 'Member name', role: 'Content creator' },
-    ],
-  },
   cta: {
     title: 'Experience Kaarya firsthand.',
     body: 'Call now to get a tour of our incredible coworking space.',
@@ -194,12 +176,11 @@ export const spaces = {
     { value: '1', unit: 'kitchen', label: 'for your chai, coffee & more' },
   ],
   features: [
-    { icon: 'pin', image: 'hall', title: 'Prime Location', body: 'Nestled in the heart of JP Nagar, Bangalore, our co-working space offers easy access and excellent connectivity, ensuring you are never far from the essentials. It’s the perfect spot to hustle, collaborate, and make things happen.' },
-    { icon: 'cup', image: 'counter', title: 'Fully-Equipped Kitchen', body: 'Treat yourself to freshly brewed coffee or tea anytime you need a pick-me-up and easy access to all the basic appliances you need to whip up something delicious whenever hunger strikes.' },
-    { icon: 'desk', image: 'tables', title: 'Professional Office Facilities', body: 'Whether you need a dedicated desk, hot desk, or private office, we have a coworking space to suit your work needs. Our ergonomic furniture and organised workstations guarantee a comfortable and productive environment.' },
-    { icon: 'community', image: 'lounge', title: 'Community & Events', body: 'Forget isolated cubicles! We help you get together with like-minded individuals through our cultural events, workshops, networking opportunities, and more to build your network and spark new collaborations.' },
-    { icon: 'flex', image: 'bar', title: 'Budget-Friendly & Flexible', body: 'Whether you are a freelancer, startup, or seasoned professional, we have affordable monthly packages as well as day passes to suit your needs. Every journey is different, and we are here to make sure you truly enjoy your work.' },
-    { icon: 'table', image: 'nook', title: 'Meeting Space on Demand', body: 'Have an important client meeting or presentation? Book one of our modern and well-equipped meeting rooms, perfect for presentations, workshops, or any collaboration needs.' },
+    { icon: 'pin', image: 'reception', title: 'Prime Location', body: 'Nestled in the heart of JP Nagar, Bangalore, our co-working space offers easy access and excellent connectivity, ensuring you are never far from the essentials. It’s the perfect spot to hustle, collaborate, and make things happen.' },
+    { icon: 'cup', image: 'cafeteria', title: 'Fully-Equipped Kitchen', body: 'Treat yourself to freshly brewed coffee or tea anytime you need a pick-me-up and easy access to all the basic appliances you need to whip up something delicious whenever hunger strikes.' },
+    { icon: 'desk', image: 'open-seating', title: 'Professional Office Facilities', body: 'Whether you need a dedicated desk, hot desk, or private office, we have a coworking space to suit your work needs. Our ergonomic furniture and organised workstations guarantee a comfortable and productive environment.' },
+    { icon: 'community', image: 'open-seating-2', title: 'Community & Events', body: 'Forget isolated cubicles! We help you get together with like-minded individuals through our cultural events, workshops, networking opportunities, and more to build your network and spark new collaborations.' },
+    { icon: 'flex', image: 'open-seating-3', title: 'Budget-Friendly & Flexible', body: 'Whether you are a freelancer, startup, or seasoned professional, we have affordable monthly packages as well as day passes to suit your needs. Every journey is different, and we are here to make sure you truly enjoy your work.' },
   ],
   offerings: {
     eyebrow: 'Offerings',
@@ -217,31 +198,79 @@ export const spaces = {
       'Networking with a dynamic community',
       'Quarterly startup incubations & seed funding',
       'Complimentary artisanal coffee & refreshments',
-      'Dedicated calling booths',
     ],
   },
+  groups: {
+    eyebrow: 'Our Spaces',
+    title: 'A room for every kind of work',
+    body: 'Meet, host, focus or record: each space at Kaarya is designed for what you need to get done.',
+    items: [
+      {
+        id: 'meeting-room',
+        name: 'Meeting Room',
+        title: 'Brainstorm, strategize, seal the deal',
+        body: 'Forget the sterile white walls and fluorescent lighting of ordinary conference spaces. At Kaarya, even your meetings get a vibrant cultural twist. Step into innovation and tradition in our thoughtfully designed meeting rooms, where creativity thrives and ideas take flight.',
+        images: ['conference-room'],
+        points: [
+          { icon: 'sizes', label: 'Huddle rooms to conference rooms' },
+          { icon: 'wifi', label: 'Wi-Fi, whiteboard or projector' },
+          { icon: 'screen', label: 'AV for seamless video calls' },
+          { icon: 'sun', label: 'Airy rooms with natural light' },
+          { icon: 'clock', label: 'Bookable by the hour' },
+        ],
+        cta: 'Book a Meeting Room',
+        plan: 'Meeting Room',
+      },
+      {
+        id: 'event-space',
+        name: 'Event Space',
+        title: 'Host gatherings that spark ideas',
+        body: 'Our event hall’s tiered seating turns into an amphitheatre for talks, workshops, meetups and cultural celebrations. Warm wood, exposed brick and natural light make every gathering feel like an occasion, not a conference.',
+        images: ['event-hall', 'happening-event-2', 'happening-event'],
+        points: [
+          { icon: 'community', label: 'Tiered amphitheatre seating' },
+          { icon: 'mic', label: 'Talks, workshops & meetups' },
+          { icon: 'lotus', label: 'Cultural celebrations & food fests' },
+          { icon: 'calendar', label: 'Host your own event' },
+        ],
+        cta: 'Enquire About Events',
+        plan: 'Event Space',
+      },
+      {
+        id: 'private-cabins',
+        name: 'Private Cabins',
+        title: 'A door you can close',
+        body: 'Glass-walled managerial cabins for teams that need focus and privacy, with the community just outside. Move into a ready-to-use cabin, or let us customise one around your team’s work style, branding and IT needs.',
+        images: ['private-cabin'],
+        points: [
+          { icon: 'key', label: 'Managerial & executive cabins' },
+          { icon: 'desk', label: 'Ergonomic, organised workstations' },
+          { icon: 'tools', label: 'Branding & custom IT on request' },
+          { icon: 'flex', label: 'Monthly, quarterly or annual terms' },
+        ],
+        cta: 'Ask About Cabins',
+        plan: 'Private Cabin',
+      },
+      {
+        id: 'podcast-space',
+        name: 'Podcast Space',
+        title: 'Record your next conversation',
+        body: 'A tucked-away, brick-walled room for recording podcasts, interviews and conversations, away from the buzz of the main floor. Pull up a hand-carved chair, hit record and let the ideas flow.',
+        images: ['podcast-space'],
+        points: [
+          { icon: 'mic', label: 'Podcasts, interviews & voice-overs' },
+          { icon: 'diya', label: 'Quiet, tucked-away room' },
+          { icon: 'wifi', label: 'High-speed internet' },
+        ],
+        cta: 'Book the Podcast Space',
+        plan: 'Podcast Space',
+      },
+    ],
+  },
+  gallery: ['hallway', 'lounge', 'signage', 'bar', 'nook', 'lounge-wide'],
   cta: {
     title: 'Experience Kaarya',
     body: 'Come experience the energy, connect with like-minded peers, and discover a space that inspires your success.',
-  },
-};
-
-export const meetingRooms = {
-  hero: {
-    eyebrow: 'Meeting Rooms in Bangalore',
-    title: 'Brainstorm, strategize, seal the deal',
-    body: 'Forget the sterile white walls and fluorescent lighting of ordinary conference spaces. At Kaarya, even your meetings get a vibrant cultural twist. Step into innovation and tradition in our thoughtfully designed meeting rooms, where creativity thrives and ideas take flight.',
-  },
-  features: [
-    { icon: 'sizes', title: 'Variety of Sizes', body: 'From intimate huddle rooms for brainstorming sessions to spacious conference rooms for presentations, we have spaces to fit your team size and meeting style.' },
-    { icon: 'wifi', title: 'Fully Equipped', body: 'Each room comes equipped with high-speed Wi-Fi, a whiteboard or projector, and comfortable seating.' },
-    { icon: 'screen', title: 'Tech-Enabled', body: 'Need to present remotely? Our rooms have the necessary AV equipment to facilitate seamless video conferencing.' },
-    { icon: 'sun', title: 'Natural Light', body: 'Experience the difference that natural light can make in your next meeting with our airy and spacious meeting rooms.' },
-    { icon: 'clock', title: 'Bookable by the Hour', body: 'Pay competitive rates only for the time you need, making our meeting rooms perfect for both short and extended sessions.' },
-  ],
-  cta: {
-    title: 'Make your next meeting a success',
-    body: 'Ditch the dull conference rooms and step into a space brimming with natural light and creative energy.',
   },
 };
 
@@ -270,7 +299,7 @@ export const book = {
     title: 'Book your co-working space',
     body: 'Experience a vibrant community, modern amenities, and a unique blend of Indian heritage and innovation. Choose your plan, book online, and start working in your new haven.',
   },
-  plans: ['Book a Tour', 'Day Pass', 'Monthly Membership', 'Meeting Room', 'Private Cabin', 'Event Space'],
+  plans: ['Book a Tour', 'Day Pass', 'Monthly Membership', 'Meeting Room', 'Private Cabin', 'Event Space', 'Podcast Space'],
   notes: [
     'Bookings are made at least 24 hours in advance.',
     'Cancel up to 12 hours before at no charge.',
@@ -355,7 +384,19 @@ export const images = {
   lounge: { src: '/media/lounge.jpg', alt: 'Lounge with carved wooden sofas in crane-print upholstery beside a wrought-iron screen and brick wall' },
   'lounge-wide': { src: '/media/lounge-wide.jpg', alt: 'Raised lounge platform with antique-style sofas and wood-panelled walls' },
   nook: { src: '/media/nook.jpg', alt: 'A quiet work nook with a laptop and notebook on a wooden table under a pendant lamp' },
-  counter: { src: '/media/counter.jpg', alt: 'Live-edge wooden counter with high chairs by the window and a terracotta flask' },
+  counter: { src: '/media/counter.jpg', position: '72% 50%', alt: 'Live-edge wooden counter with high chairs by the window and a terracotta flask' },
   tables: { src: '/media/tables.jpg', position: '78% 50%', alt: 'Teak tables and cream upholstered chairs in a warmly lit workspace' },
+  reception: { src: '/media/reception.jpg', width: 960, height: 1280, alt: 'Curved teak reception desk beside a textured pillar with KAARYA lettering and exposed brick' },
+  cafeteria: { src: '/media/cafeteria.jpg', width: 960, height: 1280, alt: 'Cafeteria with teak dining tables, a live-edge counter, chandeliers and a coffee machine' },
+  'open-seating': { src: '/media/open-seating.jpg', width: 960, height: 1280, alt: 'Teak work table and upholstered chair by a perforated white screen under a copper pendant lamp' },
+  'open-seating-2': { src: '/media/open-seating-2.jpg', width: 960, height: 1280, alt: 'View through a wrought-iron screen to open seating, tiered platforms and long work tables' },
+  'open-seating-3': { src: '/media/open-seating-3.jpg', width: 960, height: 1280, alt: 'Round teak table with cane-seated captain’s chairs near the reception' },
+  'conference-room': { src: '/media/conference-room.jpg', width: 960, height: 1280, alt: 'Conference room with an eight-seat wooden table, ergonomic chairs and a light-filtering perforated screen' },
+  'event-hall': { src: '/media/event-hall.jpg', width: 960, height: 1280, alt: 'Event hall with tiered stone seating, long tables and exposed brick' },
+  'happening-event': { src: '/media/happening-event.jpg', width: 1280, height: 960, alt: 'A speaker addressing a packed room of attendees seated around long tables and on the floor' },
+  'happening-event-2': { src: '/media/happening-event-2.jpg', width: 1280, height: 960, alt: 'A full house on the tiered seating listening to a talk in the Kaarya event hall' },
+  'private-cabin': { src: '/media/private-cabin.jpg', width: 960, height: 1280, alt: 'Private cabin with frosted glass walls on a stone-tiled floor' },
+  'podcast-space': { src: '/media/podcast-space.jpg', width: 960, height: 1280, alt: 'Podcast space with hand-carved wooden chairs and tables between curved exposed-brick walls' },
+  hallway: { src: '/media/hallway.jpg', width: 960, height: 1280, alt: 'Stone-paved hallway curving into warm wooden flooring past brick-walled cabins' },
   bar: { src: '/media/bar.jpg', alt: 'Long work counter with wooden bar stools and chandeliers overhead' },
 };

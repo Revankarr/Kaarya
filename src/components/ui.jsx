@@ -45,7 +45,7 @@ export function Photo({ name, className = '', shape = 'arch', eager }) {
   const img = images[name];
   return (
     <figure className={`photo photo--${shape} ${className}`}>
-      <img src={img.src} alt={img.alt} style={img.position && { objectPosition: img.position }} loading={eager ? 'eager' : 'lazy'} decoding="async" width="1600" height="900" />
+      <img src={img.src} alt={img.alt} style={img.position && { objectPosition: img.position }} loading={eager ? 'eager' : 'lazy'} decoding="async" width={img.width ?? 1600} height={img.height ?? 900} />
     </figure>
   );
 }

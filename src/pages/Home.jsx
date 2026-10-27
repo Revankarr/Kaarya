@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Icon from '../components/Icon.jsx';
 import Logo from '../components/Logo.jsx';
 import { Button, CtaBand, Divider, Eyebrow, FeatureGrid, Photo, Reveal, SectionHead } from '../components/ui.jsx';
@@ -151,38 +150,6 @@ function Why() {
   );
 }
 
-function Testimonials() {
-  const t = home.testimonials;
-  const [i, setI] = useState(0);
-  const n = t.items.length;
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const id = setInterval(() => setI((x) => (x + 1) % n), 7000);
-    return () => clearInterval(id);
-  }, [n]);
-  return (
-    <section className="section testimonials">
-      <div className="container testimonials__grid">
-        <SectionHead eyebrow={t.eyebrow} title={t.title} body={t.body} />
-        <div className="quotes" aria-live="polite">
-          <span className="quotes__mark" aria-hidden="true">“</span>
-          {t.items.map((q, k) => (
-            <figure key={k} className={`quote${k === i ? ' is-active' : ''}`} aria-hidden={k !== i}>
-              <blockquote>{q.quote}</blockquote>
-              <figcaption><strong>{q.name}</strong> · {q.role}</figcaption>
-            </figure>
-          ))}
-          <div className="quotes__dots">
-            {t.items.map((_, k) => (
-              <button key={k} className={k === i ? 'is-active' : ''} onClick={() => setI(k)} aria-label={`Show testimonial ${k + 1}`} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export default function Home() {
   return (
     <>
@@ -193,7 +160,6 @@ export default function Home() {
       <WhoWeAre />
       <Plans />
       <Why />
-      <Testimonials />
       <CtaBand title={home.cta.title} body={home.cta.body} />
     </>
   );

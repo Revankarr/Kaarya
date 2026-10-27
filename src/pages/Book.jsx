@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Icon from '../components/Icon.jsx';
 import { Eyebrow, PageHero, Reveal } from '../components/ui.jsx';
 import { book, site } from '../content.js';
@@ -6,6 +7,14 @@ import { book, site } from '../content.js';
 function BookingForm() {
   const [status, setStatus] = useState('idle');
   const [minDate, setMinDate] = useState('');
+  const [searchParams] = useSearchParams();
+  const [plan, setPlan] = useState(book.plans[0]);
+
+  // Space pages link here with ?plan=…; applied after hydration so it matches the prerendered HTML.
+  useEffect(() => {
+    const requested = searchParams.get('plan');
+    if (book.plans.includes(requested)) setPlan(requested);
+  }, [searchParams]);
 
   // Computed on the client so the prerendered HTML never carries a stale date.
   useEffect(() => setMinDate(new Date(Date.now() + 864e5).toISOString().slice(0, 10)), []);
@@ -50,9 +59,9 @@ function BookingForm() {
     <form className="form" onSubmit={onSubmit}>
       <fieldset className="form__plans">
         <legend>What would you like to book?</legend>
-        {book.plans.map((p, i) => (
+        {book.plans.map((p) => (
           <label key={p} className="pill">
-            <input type="radio" name="plan" value={p} defaultChecked={i === 0} />
+            <input type="radio" name="plan" value={p} checked={plan === p} onChange={() => setPlan(p)} />
             <span>{p}</span>
           </label>
         ))}

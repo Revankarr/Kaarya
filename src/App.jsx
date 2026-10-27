@@ -5,7 +5,6 @@ import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Spaces from './pages/Spaces.jsx';
-import MeetingRooms from './pages/MeetingRooms.jsx';
 import Events from './pages/Events.jsx';
 import Book from './pages/Book.jsx';
 import Policies from './pages/Policies.jsx';
@@ -16,7 +15,6 @@ export const routes = [
   { path: '/', element: <Home /> },
   { path: '/about', element: <About /> },
   { path: '/spaces', element: <Spaces /> },
-  { path: '/meeting-rooms', element: <MeetingRooms /> },
   { path: '/events', element: <Events /> },
   { path: '/book', element: <Book /> },
   { path: '/policies', element: <Policies /> },

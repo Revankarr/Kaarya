@@ -27,8 +27,7 @@ Each route is written as `dist/<route>/index.html`, and `dist/404.html`, `sitema
 ## Before launch
 
 - [ ] Replace the placeholder phone, email and street address in `src/content.js` (`site`).
-- [ ] Replace the placeholder testimonials (`home.testimonials.items`) with real member reviews.
 - [ ] Paste the Google Business Profile link (`site.googleBusiness`) and Instagram/LinkedIn URLs.
 - [ ] Optional: set `site.formEndpoint` (e.g. Formspree) so bookings arrive directly. Without it the form opens a pre-filled email.
-- [ ] Soul Signature font: add the licensed file to `public/fonts/` and its `url()` in `src/styles.css`. Until then headings use Mr Dafoe, a close match.
-- [ ] Eina 01 only came in SemiBold, so it is used for headings, nav and buttons. Paragraphs use Figtree, an Eina-like Google font. Add Eina 01 Regular to use it everywhere.
+- [ ] Soul Signature (headings, `public/fonts/SoulSignature.ttf`) is © Fikryal.Co Studio. Confirm Kaarya holds a commercial licence before launch.
+- All other text uses Eina 01 SemiBold (`public/fonts/Eina01-SemiBold.ttf`).
