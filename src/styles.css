@@ -81,7 +81,7 @@ body::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: var(--linen-texture) center / 1022px auto repeat;
+  background: var(--linen-texture) center / 2000px auto repeat;
   opacity: 0.4;
   mix-blend-mode: multiply;
 }
@@ -2535,21 +2535,21 @@ address {
 
   /* Soul Signature is narrow, so headings can run larger on phones. */
   .display {
-    font-size: 3.9rem;
+    font-size: 3.4rem;
     line-height: 1.02;
   }
 
   .display--xl {
-    font-size: 4.5rem;
+    font-size: 3.9rem;
   }
 
   .display--hero {
-    font-size: 5rem;
+    font-size: 4.4rem;
     line-height: 0.95;
   }
 
   .pull-quote {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 
   .hero__inner {
@@ -2646,15 +2646,15 @@ address {
   }
 
   .display {
-    font-size: 3.5rem;
+    font-size: 3.1rem;
   }
 
   .display--xl {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .display--hero {
-    font-size: 4.4rem;
+    font-size: 3.9rem;
   }
 }
 
