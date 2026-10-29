@@ -23,6 +23,9 @@
   --sand: #e9ddcb;
   --clay: #b87333;
   --clay-deep: #9a5e2a;
+  /* Call-to-action buttons and the ticker use the dark brown of the Why section. */
+  --cta: var(--brown);
+  --cta-hover: var(--brown-2);
   --gold: #b8925a;
   --gold-soft: #d9be8c;
   --brown: #3b2316;
@@ -329,9 +332,9 @@ address {
 /* ───────────────────────── Buttons ───────────────────────── */
 
 .btn {
-  --bg: var(--clay);
+  --bg: var(--cta);
   --fg: var(--cream);
-  --bd: var(--clay);
+  --bd: var(--cta);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -365,9 +368,31 @@ address {
 }
 
 .btn--solid:hover {
-  --bg: var(--clay-deep);
-  --bd: var(--clay-deep);
-  box-shadow: 0 16px 30px -14px rgba(169, 87, 58, 0.7);
+  --bg: var(--cta-hover);
+  --bd: var(--cta-hover);
+  box-shadow: 0 16px 30px -14px rgba(59, 35, 22, 0.7);
+}
+
+/* On dark backgrounds a brown button would disappear, so it turns cream. */
+.hero .btn--solid,
+.section--dark .btn--solid,
+.plan-card--featured .btn--solid,
+.mobile-menu .btn--solid,
+.site-header:not(.is-solid) .btn--solid,
+.page-hero:not(.page-hero--plain) .btn--solid {
+  --bg: var(--cream);
+  --fg: var(--brown);
+  --bd: var(--cream);
+}
+
+.hero .btn--solid:hover,
+.section--dark .btn--solid:hover,
+.plan-card--featured .btn--solid:hover,
+.mobile-menu .btn--solid:hover,
+.site-header:not(.is-solid) .btn--solid:hover,
+.page-hero:not(.page-hero--plain) .btn--solid:hover {
+  --bg: var(--gold-soft);
+  --bd: var(--gold-soft);
 }
 
 .btn--outline {
@@ -783,7 +808,7 @@ address {
 /* ───────────────────────── Ticker ───────────────────────── */
 
 .ticker {
-  background: var(--clay);
+  background: var(--cta);
   color: var(--cream);
   overflow: hidden;
   padding-block: 18px;
