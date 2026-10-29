@@ -66,10 +66,6 @@ function Rooted() {
         </Reveal>
         <Reveal className="rooted__media" delay={120}>
           <Photo name="reception" shape="arch" />
-          <span className="rooted__badge" aria-hidden="true">
-            <span className="script">Kaarya</span>
-            <span>Sanskrit for<br />action &amp; work</span>
-          </span>
         </Reveal>
       </div>
     </section>
@@ -107,7 +103,7 @@ function Plans() {
   return (
     <section className="section plans" id="plans">
       <div className="container">
-        <SectionHead eyebrow={p.eyebrow} title={p.title} body={p.body} align="center" />
+        <SectionHead eyebrow={p.eyebrow} align="center" />
         <div className="plans__grid">
           {p.items.map((plan, i) => (
             <Reveal className={`plan-card${i === 0 ? ' plan-card--featured' : ''}`} key={plan.name} delay={i * 120}>

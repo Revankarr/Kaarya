@@ -3,7 +3,7 @@ import { Button, CtaBand, Divider, Eyebrow, PageHero, Photo, Reveal, SectionHead
 import { about, home } from '../content.js';
 
 export default function About() {
-  const { meaning, story, founder, mission } = about;
+  const { meaning, story, mission } = about;
   return (
     <>
       <PageHero {...about.hero} image="lounge-wide" />
@@ -33,20 +33,6 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section--dark founder">
-        <div className="kolam" aria-hidden="true" />
-        <div className="container founder__grid">
-          <Reveal className="founder__portrait">
-            <Photo name="nook" shape="arch" />
-          </Reveal>
-          <Reveal delay={120}>
-            <Eyebrow light>{founder.eyebrow}</Eyebrow>
-            <h2 className="display">{founder.name}</h2>
-            {founder.body.map((p) => <p key={p} className="body-lg">{p}</p>)}
-            <blockquote className="pull-quote pull-quote--light">“{founder.quote}”</blockquote>
-          </Reveal>
-        </div>
-      </section>
 
       <section className="section mission">
         <div className="container mission__inner">

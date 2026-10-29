@@ -44,7 +44,7 @@ export const meta = {
   '/about': {
     title: 'About Kaarya – Where Tradition Meets Tomorrow | Coworking in Bangalore',
     description:
-      'Kaarya means action in Sanskrit. Meet the story and the architect, Ajay JS, behind Bangalore’s first culturally rooted coworking space.',
+      'Kaarya means action in Sanskrit. Discover the story behind Bangalore’s first culturally rooted coworking space.',
   },
   '/spaces': {
     title: 'Coworking Spaces & Meeting Rooms in JP Nagar, Bangalore | Kaarya',
@@ -99,8 +99,6 @@ export const home = {
   },
   plans: {
     eyebrow: 'Plans',
-    title: 'Monthly memberships & day passes',
-    body: 'Whether you are a freelancer needing occasional workspace or a growing startup requiring dedicated space, we have options to suit your needs.',
     items: [
       {
         name: 'Monthly Membership',
@@ -150,15 +148,6 @@ export const about = {
       'Kaarya wasn’t born out of a boardroom meeting but from a simple observation: Indians have a unique way of working and thriving. We believe that creativity blossoms when nurtured by familiarity and that inspiration strikes when surrounded by cultural touchstones.',
       'We are the first traditionally native co-working space in Bangalore, and we are proud to offer a work environment that is uniquely Indian, undeniably comfortable, and infinitely inspiring.',
     ],
-  },
-  founder: {
-    eyebrow: 'The Architect Behind Kaarya',
-    name: 'Ajay JS',
-    body: [
-      'After spending six years running a successful multi-disciplinary architecture firm, our founder, Ajay JS, like many, craved a workspace that fostered creativity and a sense of community.',
-      'He poured his heart and soul into creating Kaarya. A space that blended the best of modern amenities with the rich cultural heritage of India.',
-    ],
-    quote: 'When you walk into Kaarya, you are not just entering a co-working space; you are stepping into the realisation of a dream built on the foundation of passion, purpose, and a whole lot of chai!',
   },
   mission: {
     eyebrow: 'Our Mission',

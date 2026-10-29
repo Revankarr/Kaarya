@@ -12,7 +12,7 @@ export function SectionHead({ eyebrow, title, body, align = 'left', light, as: H
   return (
     <header className={`section-head section-head--${align}${light ? ' is-light' : ''}`}>
       {eyebrow && <Eyebrow light={light}>{eyebrow}</Eyebrow>}
-      <H className="display">{title}</H>
+      {title && <H className="display">{title}</H>}
       {body && <p className="lead">{body}</p>}
     </header>
   );
